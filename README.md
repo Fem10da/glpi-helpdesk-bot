@@ -6,11 +6,11 @@ Source is private; this repo documents the architecture.
 
 ## What it does
 
-This is not a Telegram form over GLPI. Users write naturally. The bot structures the request, detects common operational cases, and creates the right ticket.
+This is not a Telegram form over GLPI. Users write naturally. The bot structures the request, detects common operational cases, and creates a GLPI ticket with routing for supported request types.
 
 - Telegram is the interface. GLPI is the source of truth for tickets, users, statuses, followups, solutions and attachments.
 - Each Telegram user is linked to an active GLPI user. Works in private chats and in configured allowed groups.
-- Smart splitting: when one message contains clearly separable, unrelated issues, the bot creates separate tickets.
+- Smart splitting: when one message contains clearly separable, unrelated issues, the bot can split them into separate tickets.
 - GLPI events (followups, solutions, status changes) are pushed to users in Telegram.
 
 ## Architecture
